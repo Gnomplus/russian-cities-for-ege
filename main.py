@@ -57,6 +57,11 @@ while True:
         print('Неверно! Правильный ответ: ' + ''.join(city[2] for city in formed_case)[:-3] + '\n')
 
     count += 1
+          
+    # Удаляем привязку позиции
+    for j in range(0, 6):
+        formed_case[j].pop()
+
 
     # Вывод статистики
     print(f'Решено/Верных: {count}/{count_correct}')

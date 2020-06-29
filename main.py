@@ -50,11 +50,11 @@ while True:
     formed_case.sort(key=lambda x: x[1])
 
     # Проверяем ответ
-    if ''.join(city[2] for city in formed_case)[:-3] == answer:
+    if ''.join(city[2] for city in formed_case)[:-3][::-1] == answer:
         count_correct += 1
         print('Верно!\n')
     else:
-        print('Неверно! Правильный ответ: ' + ''.join(city[2] for city in formed_case)[:-3] + '\n')
+        print('Неверно! Правильный ответ: ' + ''.join(city[2] for city in formed_case)[:-3][::-1] + '\n')
 
     count += 1
           
